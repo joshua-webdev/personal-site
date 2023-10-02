@@ -1,0 +1,15 @@
+.icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.icon {
+    display: block;
+    height: 24px;
+    transition: transform 0.25s;
+    width: 24px;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+}

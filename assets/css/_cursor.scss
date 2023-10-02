@@ -1,0 +1,18 @@
+@use "mouse-follower/src/scss/index.scss";
+
+.mf-cursor, .mf-cursor.-pointer {
+    mix-blend-mode: overlay;
+    z-index: -1;
+
+    &::before {
+        color: #91FFFA;
+        display: block;
+        filter: blur(100px);
+        height: 600px;
+        left: -300px;
+        opacity: 0.4;
+        top: -300px;
+        transform: scale(1);
+        width: 600px;
+    }
+}

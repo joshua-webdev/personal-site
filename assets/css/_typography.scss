@@ -1,0 +1,46 @@
+:root {
+    --body-color: #88a8cc;
+    --header-color: #bdd5f2;
+    --link-color: #d1c8ff;
+}
+
+body {
+    color: var(--body-color);
+}
+
+a {
+    font-weight: 500;
+    text-decoration: none;
+
+    &:hover {
+        color: var(--link-color);
+    }
+}
+
+h1, h2, h3, h4, h5, h6, a {
+    color: var(--header-color);
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 56px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+header {
+    h1,  h2 {
+        margin-bottom: 0;
+    }
+
+    p {
+        font-size: 20px;
+        margin-bottom: 0.5em;
+    }
+}

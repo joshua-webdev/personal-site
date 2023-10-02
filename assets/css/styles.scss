@@ -1,0 +1,76 @@
+@use "./fonts";
+@use "./cursor";
+@use "./typography";
+@use "./background";
+@use "./icons";
+
+html {
+    background: #2a3b55;
+    box-sizing: border-box;
+    font-family: 'WorkSans', -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+    font-size: 18px;
+    height: 100%;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    min-height: 100%;
+    overflow-x: hidden;
+    padding: 0;
+}
+
+.grid {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1280px;
+    padding: 0 4rem;
+    width: 100%;
+}
+
+header, main {
+    flex: 1;
+    margin: 6rem 1rem;
+}
+
+main {
+    position: relative;
+
+    &::before {
+        background: rgba(120,129,193,0.1);
+        background: linear-gradient(225deg, rgba(120,129,193,0.1) 0%, rgba(255,255,255,0) 100%);
+        border-radius: 50%;
+        content: '';
+        display: block;
+        height: 600px;
+        position: absolute;
+        right: -200px;
+        top: -300px;
+        width: 600px;
+    }
+}
+
+@media (max-width: 960px) {
+    .grid {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    header, main {
+        flex: 0;
+        margin: 2rem;
+    }
+}
+
+::selection {
+    background: rgba(58, 91, 125, 30%);
+}

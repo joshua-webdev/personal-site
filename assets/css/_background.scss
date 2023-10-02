@@ -16,3 +16,33 @@
         position: fixed;
     }
 }
+
+.circle {
+    background: rgba(120,129,193,0.2);
+    background: linear-gradient(225deg, rgba(120,129,193,0.2) 0%, rgba(255,255,255,0) 100%);
+    border-radius: 50%;
+    height: 75vh;
+    min-height:600px;
+    min-width:600px;
+    position: fixed;
+    width: 75vh;
+    z-index: -1;
+
+    &--top {
+        right: -15vh;
+        top: -15vh;
+    }
+
+    &--bottom {
+        bottom: -25vh;
+        left: -25vh;
+    }
+}
+
+@media (max-width: 960px) {
+    .circle {
+        &--bottom {
+            display: none;
+        }
+    }
+}
